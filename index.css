@@ -199,7 +199,7 @@ h1.subheading {
 .card__title {
   font-size: 1em;
   margin: 0 0 0.3em;
-  color: #6a515e;
+  color: var(--color-3);
 }
 
 .card__status {
