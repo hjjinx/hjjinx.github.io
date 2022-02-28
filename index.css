@@ -80,8 +80,7 @@ a:visited {
 }
 .main > .image {
   flex: 1;
-  background: url("https://ipfs.io/ipfs/QmYCswNUPm4Kz1ZgtYNLi2Wimm8b44dzseMDtx77S3Eo3o?filename=me.jpg")
-    no-repeat;
+  background: url("./images/image.jpg") no-repeat;
   padding: 0 0;
   background-position: top center;
 }
