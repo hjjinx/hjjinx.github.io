@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+:root {
+  --color-1: #000;
+  --color-2: #222;
+  --color-3: #ff6600;
+  --color-4: #aaa;
+  --curve: 20;
+}
+
+::selection {
+  background-color: var(--color-3);
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  /* color: white; */
+  font: normal 15px / 1.33333 monospace;
+  background-color: var(--color-1);
+  background: radial-gradient(var(--color-2), var(--color-1));
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+
+.section {
+  flex: 1;
+  margin: 1rem 0;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+main,
+.three-d-main *,
+.three-d-main *:before,
+.three-d-main *:after {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+main {
+  display: block;
+  max-width: 60rem;
+  margin: 0 auto;
+  position: relative;
+  transition: 200ms;
+}
+
+.three-d:before {
+  color: white;
+  left: 0;
+  position: absolute;
+  content: attr(three-d-text);
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-transform: translateZ(-50rem);
+  transform: translateZ(-50rem);
+  opacity: 0.1;
+}
+
+.myImage {
+  background: url("./image.jpg") no-repeat;
+  background-position: top center;
+  width: 400px;
+  height: 400px;
+  margin: 2rem 0;
+}
+.image:before {
+  width: inherit;
+  height: inherit;
+  content: "";
+}
+.myImage:before {
+  background: url("./image.jpg") no-repeat;
+}
+
+h1,
+h2,
+h1:before,
+h2:before {
+  margin: 0 !important;
+  font-size: 2.5rem !important;
+}
+
+h1,
+h1:before {
+  font-size: 3rem !important;
+  color: var(--color-3) !important;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+}
+.links > a,
+.links > a:before {
+  align-self: center;
+  font-size: 30px;
+  margin: 0 10px;
+  color: var(--color-3);
+}
+
+.divider {
+  font-size: 30px;
+  margin: 0 10px;
+}
