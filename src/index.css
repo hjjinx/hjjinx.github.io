@@ -68,6 +68,7 @@ main {
   background: url("./image.jpg") no-repeat;
   background-position: top center;
   width: 400px;
+  max-width: 100%;
   height: 400px;
   margin: 2rem 0;
 }
@@ -98,12 +99,13 @@ h1:before {
   display: inline-flex;
   flex-direction: row;
   vertical-align: middle;
+  flex-wrap: wrap;
 }
 .links > a,
 .links > a:before {
   align-self: center;
   font-size: 1.5rem;
-  margin: 0 10px;
+  margin: 0px 10px 10px 0;
   padding: 0 5px;
   transition: all 200ms;
   background: var(--color-3);
@@ -111,10 +113,16 @@ h1:before {
 }
 
 .links > a:hover {
-  transform: rotate(-5deg);
   background: var(--color-5);
   color: var(--color-3);
 }
+.links > a:nth-of-type(even):hover {
+  transform: rotate(-5deg);
+}
+.links > a:nth-of-type(odd):hover {
+  transform: rotate(5deg);
+}
+
 .divider {
   font-size: 30px;
   margin: 0 10px;
