@@ -126,7 +126,7 @@ h1:before {
 .links > a:before {
   align-self: center;
   font-size: 1.5rem;
-  margin: 0px 10px 10px 0;
+  margin: 0;
   padding: 0 5px;
   transition: all 500ms;
   background: var(--color-3);
@@ -149,10 +149,10 @@ h1:before {
   margin: 0 10px;
 }
 
-.theme-changer {
+.theme-changer,
+.theme-changer:before {
   cursor: pointer;
   font-size: 1.5rem;
-  margin: 0px 10px 0px 0;
   padding: 0 5px;
   transition: all 500ms;
   background: var(--color-3);
