@@ -1,4 +1,8 @@
-const AboutMe = () => (
+type AboutMeProps = {
+  isDarkMode: boolean;
+};
+
+const AboutMe = ({ isDarkMode }: AboutMeProps) => (
   <>
     <div
       className="section three-d"
@@ -18,9 +22,11 @@ const AboutMe = () => (
     </div>
     <div
       className="section three-d"
-      three-d-text={`I 🧡 coding, and that is the reason I do it.`}
+      three-d-text={`I ${
+        isDarkMode ? "🧡" : "💙"
+      } coding, and that is the reason I do it.`}
     >
-      I 🧡 coding, and that is the reason I do it.
+      I {isDarkMode ? "🧡" : "💙"} coding, and that is the reason I do it.
     </div>
   </>
 );
