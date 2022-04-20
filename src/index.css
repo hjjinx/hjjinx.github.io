@@ -85,12 +85,21 @@ main {
 }
 
 .myImage {
+  position: relative;
   background: url("./image.jpg") no-repeat;
   background-position: top center;
   width: 400px;
   max-width: 100%;
   height: 400px;
   margin: 2rem 0;
+}
+.myImageMask {
+  width: 400px;
+  max-width: 100%;
+  height: 400px;
+  background-image: radial-gradient(var(--color-3) 1px, transparent 0),
+    radial-gradient(var(--color-3) 1px, transparent 0);
+  background-size: 3px 3px;
 }
 .image:before {
   width: inherit;

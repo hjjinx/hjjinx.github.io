@@ -50,7 +50,9 @@ export default function App() {
         </div>
       </div>
       <Heading />
-      <div className="section three-d image myImage"></div>
+      <div className="section three-d image myImage">
+        <div className="section three-d image myImageMask" />
+      </div>
 
       <Links />
       <AboutMe isDarkMode={darkMode} />
