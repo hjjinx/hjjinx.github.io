@@ -108,6 +108,7 @@ main {
 }
 .myImage:before {
   background: url("./image.jpg") no-repeat;
+  border-radius: 10px;
 }
 
 h1,
@@ -142,7 +143,8 @@ h1:before {
   color: var(--color-5);
 }
 
-.links > a:hover {
+.links > a:hover,
+.links > a:hover:before {
   background: var(--color-5);
   color: var(--color-3);
 }
@@ -169,4 +171,7 @@ h1:before {
   position: absolute;
   right: 0;
   top: -50px;
+}
+.theme-changer:before {
+  top: 0;
 }
