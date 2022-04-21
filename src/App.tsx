@@ -4,7 +4,7 @@ import Links from "./Components/Links";
 import AboutMe from "./Components/AboutMe";
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const mainRef = React.useRef<HTMLElement>(null);
 
   const change3DRotation = (e: MouseEvent) => {
@@ -31,9 +31,10 @@ export default function App() {
     if (
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
-    )
+    ) {
       document.getElementsByTagName("html")[0].className = "dark-orange";
-    else document.getElementsByTagName("html")[0].className = "dark-blue";
+      setDarkMode(true);
+    } else document.getElementsByTagName("html")[0].className = "dark-blue";
 
     document.addEventListener("mousemove", change3DRotation);
     return () => document.removeEventListener("mousemove", change3DRotation);
