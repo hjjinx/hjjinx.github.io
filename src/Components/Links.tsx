@@ -11,14 +11,6 @@ const Links = () => (
     <div className="divider three-d" three-d-text="|">
       |
     </div>
-    <a
-      href="https://www.linkedin.com/in/hjjinx/"
-      target="_blank"
-      className="three-d"
-      three-d-text="LinkedIn"
-    >
-      LinkedIn
-    </a>
     <div className="divider three-d" three-d-text="|">
       |
     </div>
